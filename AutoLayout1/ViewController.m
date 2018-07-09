@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.btnhong addTarget:self action:@selector(stayPressed:) forControlEvents:UIControlEventTouchDown];
+    [self.btnxam addTarget:self action:@selector(stayPressed:) forControlEvents:UIControlEventTouchDown];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -26,4 +28,22 @@
 }
 
 
+- (IBAction)clickcam:(UIButton *)sender {
+    [self.btncam removeFromSuperview];
+}
+
+- (IBAction)clickVang:(UIButton *)sender {
+    [self.btnvang removeFromSuperview];
+}
+
+- (IBAction)clickxanh:(UIButton *)sender {
+    [self.btnxanh removeFromSuperview];
+}
+-(void)stayPressed:(UIButton *) sender {
+    if (sender.currentTitle == @"X") {
+        [sender setTitle:@"A very long title for this button" forState:UIControlStateNormal];
+    }else{
+        [sender setTitle:@"X" forState:UIControlStateNormal];
+    }
+}
 @end

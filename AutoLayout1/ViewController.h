@@ -10,6 +10,16 @@
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIButton *btncam;
+@property (strong, nonatomic) IBOutlet UIButton *btnvang;
+@property (strong, nonatomic) IBOutlet UIButton *btnxanh;
+- (IBAction)clickcam:(UIButton *)sender;
+- (IBAction)clickVang:(UIButton *)sender;
+- (IBAction)clickxanh:(UIButton *)sender;
+@property (strong, nonatomic) IBOutlet UIButton *btnxam;
+
+@property (strong, nonatomic) IBOutlet UIButton *btnhong;
+
 
 @end
 
